@@ -52,11 +52,11 @@
                                             $status=$row->status_pasien;
                                             if($status == "Aktif")
                                             {
-                                                echo '<a href='. base_url()."admin/deactive/".$row->id_pasien.' class="btn btn-success">Activated</a>';
+                                                echo '<a href='. base_url()."admin/deactivePasien/".$row->id_pasien.' class="btn btn-success">Activated</a>';
                                             }
                                             elseif($status == "Tidak Aktif")
                                             {
-                                                 echo '<a href='. base_url()."admin/active/".$row->id_pasien.' class="btn btn-danger">Deactivated</a>';
+                                                 echo '<a href='. base_url()."admin/activePasien/".$row->id_pasien.' class="btn btn-danger">Deactivated</a>';
                                             }; 
                                              
                                             echo ' <a href='. base_url()."admin/update/".$row->id_pasien.' class="btn btn-primary"> Editt</a>
