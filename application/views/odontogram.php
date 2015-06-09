@@ -6,13 +6,13 @@
 
         <div class="row">
             <div class="col-lg-12 col-md-4">
+                <form action="<?php echo base_url();?>medis/insert" method="post">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         Odontogram
                     </div>
                     <div class="panel-body">
                         <p>Berikut ini adalah posisi gigi yang telah diperiksa</p>
-                        
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="col-xs-1 btn btn-warning btn-lg" style="text-align:center;float:right" data-toggle="modal" data-target="#Modal11">11 </div>
@@ -177,10 +177,12 @@
                             <div class="col-md-4">
                                 <?php echo date("d-m-Y");?>
                             </div>
+                            <input type="hidden" name="demo18" id="demo18"/>
                         </div>
-                    <div class="btn btn-primary" style="float:right"/>Kirim</div>
+                    <button type="submit" class="btn btn-primary" style="float:right" value="Kirim">Kirim</button>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
         <!-- /.row -->

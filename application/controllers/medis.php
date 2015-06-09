@@ -19,6 +19,12 @@ class Medis extends Main_Controller {
         $this->load->view('include/footer');
     }    
     
+    public function insert()
+    {
+        $var = $this->input->post('demo18');
+        echo $var;
+        echo "a";
+    }
 }
 
 /* End of file frontpage.php */
