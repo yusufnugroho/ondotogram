@@ -90,8 +90,7 @@ for($i=11;$i<=85;$i++)
       </div>
       </form>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="myFunction<?php echo $i;?>()">Save changes</button>
+        <button type="button" class="btn btn-primary" onclick="myFunction<?php echo $i;?>()"data-dismiss="modal">OK</button>
       </div>
     </div>
   </div>

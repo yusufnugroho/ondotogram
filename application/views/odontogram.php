@@ -177,9 +177,11 @@
                             <div class="col-md-4">
                                 <?php echo date("d-m-Y");?>
                             </div>
-                            <input type="hidden" name="demo18" id="demo18"/>
                         </div>
-                    <button type="submit" class="btn btn-primary" style="float:right" value="Kirim">Kirim</button>
+                        <div style="float:right">
+                            <p id="demo18"></p>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="float:right"/>Kirim</button>
                     </div>
                 </div>
                 </form>
