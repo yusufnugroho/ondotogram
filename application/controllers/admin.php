@@ -35,16 +35,29 @@ class Admin extends CI_Controller {
         $this->load->view('admin/content/listPasien',$data);
         $this->load->view('admin/include/footer');
     }
-    public function active($id_dokter)
+    
+    public function activeDokter($id_dokter)
     {       
             $this->m_dokter->active($id_dokter);
             $this->listDokter();
     }
-    public function deactive($id_dokter)
+    public function deactiveDokter($id_dokter)
     {
             $this->m_dokter->deactive($id_dokter);
             $this->listDokter();
     }
+    /*Pasien */
+    public function activePasien($id_dokter)
+    {       
+            $this->m_pasien->active($id_dokter);
+            $this->listPasien();
+    }
+    public function deactivePasien($id_dokter)
+    {
+            $this->m_pasien->deactive($id_dokter);
+            $this->listPasien();
+    }
+    
     //Show Add New Doctor
     public function addDokter()
     {		
