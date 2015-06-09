@@ -80,10 +80,33 @@ class Admin extends CI_Controller {
             $hp_dokter = $this->input->post('hp_dokter');
             $this->m_dokter->insert($user_dokter,$password_dokter,$nama_lengkap_dokter,$identitas_dokter,$jenis_kelamin_dokter,
                     $alamat_dokter,$hp_dokter);
-            $this->index();
+            $this->listDokter();
            
     }
+    public function addPasien()
+    {		
 
+            $this->load->view('admin/include/header');
+            $this->load->view('admin/include/navbar');
+            $this->load->view('admin/content/addPasien');
+            $this->load->view('admin/include/footer');
+    }
+    //Insert Function For New Doctor
+    public function insertPasien()
+    {
+
+            $user_pasien = $this->input->post('user_pasien');
+            $password_pasien = $this->input->post('password_pasien');
+            $nama_lengkap_pasien = $this->input->post('nama_lengkap_pasien');
+            $identitas_pasien = $this->input->post('identitas_pasien');
+            $jenis_kelamin_pasien = $this->input->post('jenis_kelamin_pasien');
+            $alamat_pasien = $this->input->post('alamat_pasien');
+            $hp_pasien = $this->input->post('hp_pasien');
+            $this->m_pasien->insert($user_pasien,$password_pasien,$nama_lengkap_pasien,$identitas_pasien,$jenis_kelamin_pasien,
+                    $alamat_pasien,$hp_pasien);
+            $this->listPasien();
+           
+    }
 
     
 
