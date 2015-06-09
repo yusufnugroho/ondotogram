@@ -9,13 +9,13 @@ class Admin extends CI_Controller {
         parent::__construct();
         $this->load->helper('url');
         $this->load->model('m_dokter');
+        $this->load->model('m_pasien');
         
     }
     public function index() {
 
         $this->load->view('admin/include/header');
         $this->load->view('admin/include/navbar');
-        //$this->load->view('admin/content/listDokter');
         $this->load->view('admin/include/footer');
     }
     
@@ -25,6 +25,14 @@ class Admin extends CI_Controller {
         $this->load->view('admin/include/header');
         $this->load->view('admin/include/navbar');
         $this->load->view('admin/content/listDokter',$data);
+        $this->load->view('admin/include/footer');
+    }
+    public function listPasien()
+    {
+        $data['pasien'] = $this->m_pasien->getDataPasien();
+        $this->load->view('admin/include/header');
+        $this->load->view('admin/include/navbar');
+        $this->load->view('admin/content/listPasien',$data);
         $this->load->view('admin/include/footer');
     }
     public function active($id_dokter)
@@ -60,25 +68,7 @@ class Admin extends CI_Controller {
             $this->m_dokter->insert($user_dokter,$password_dokter,$nama_lengkap_dokter,$identitas_dokter,$jenis_kelamin_dokter,
                     $alamat_dokter,$hp_dokter);
             $this->index();
-            /*
-
-             * `user_dokter`, 
-             * `password_dokter`, 
-             * `nama_lengkap_dokter`, 
-             * `identitas_dokter`, 
-             * `tempat_lahir_dokter`, 
-             * `tanggal_lahir_dokter`, 
-             * `jenis_kelamin_dokter`, 
-             * `alamat_dokter`, 
-             * `provinsi_dokter`, 
-             * `kota_dokter`, 
-             * `kecamatan_dokter`, 
-             * `kode_pos_dokter`, 
-             * `telepon_rumah_dokter`, 
-             * `fax_dokter`, 
-             * `hp_dokter`,
-             *  `foto_dokter`, 
-             * `email_dokter`,             */
+           
     }
 
 
