@@ -83,9 +83,23 @@ for($i=11;$i<=85;$i++)
             var BR<?php echo $i;?> = document.getElementById("BR<?php echo $i;?>").value;
             var restorasi<?php echo $i;?> = document.getElementById("restorasi<?php echo $i;?>").value;
             var protesa<?php echo $i;?> = document.getElementById("protesa<?php echo $i;?>").value;
+            
             var x<?php echo $i;?> = PG<?php echo $i;?> + " - " + KG<?php echo $i;?> + " - " + BR<?php echo $i;?> + " - " + restorasi<?php echo $i;?> + " - " + protesa<?php echo $i;?>;
-            var hai = document.getElementById("demo<?php echo $i;?>").innerHTML =  x<?php echo $i;?>;
+            var hai = document.getElementById("demo<?php echo $i;?>").innerHTML =  x<?php echo $i;//echo "test";?>;
+        /*Test*/
+        $.ajax({
+           type: "POST",
+           url: "<?php echo base_url(); ?>medis/insert",
+           data: {name: x<?php echo $i;?>},
+ 
+           success: function(data){
+            //window.location.replace(<?php echo base_url();?>admin/medis/listOdontogram);   
+            //alert(data);
+           }
+ 
+         });
         }
+         
         </script>
       </div>
       </form>

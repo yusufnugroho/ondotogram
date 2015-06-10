@@ -45,7 +45,7 @@
                                             <input type='text' name='user_pasien'class="form-control" autocomplete="off" required autofocus>
                                         </div>       
                                         <div class="form-group">
-                                            <label>Password Doktor</label>
+                                            <label>Password Pasien</label>
                                             <input type='password' name='password_pasien'class="form-control" autocomplete="off" required autofocus>
                                         </div>       
                                         <div class="form-group">
