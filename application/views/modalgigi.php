@@ -93,7 +93,8 @@ for($i=11;$i<=85;$i++)
            data: {name: x<?php echo $i;?>},
  
            success: function(data){
-               alert(data);
+            //window.location.replace(<?php echo base_url();?>admin/medis/listOdontogram);   
+            //alert(data);
            }
  
          });

@@ -16,8 +16,6 @@ class Medis extends Main_Controller {
         
         $this->load->view('admin/include/header');
         $this->load->view('admin/include/navbar');
-        //$this->load->view('odontogram',$data);
-        //$this->load->view('modalgigi',$data);
         $this->load->view('admin/include/footer');
     }    
     public function addOdontogram() {
@@ -40,9 +38,17 @@ class Medis extends Main_Controller {
         $this->load->model('m_medis');
         $var = $this->input->post('name');
         echo $var;
-        echo "TEST";
-        $this->m_medis->insert($var);
-        $this->index();
+
+        if($var!="")
+        {
+            $this->m_medis->insert($var);
+            $this->listOdontogram();
+        }
+        else{
+            echo "NULL";
+            $this->listOdontogram();
+            
+        }
     }
      public function listOdontogram()
     {
