@@ -1,4 +1,11 @@
 
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Tables</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
 
 <div class="section">
 
@@ -165,7 +172,7 @@
                                 Gigi Anomali
                             </div>
                             <div class="col-md-2">
-                                <select name="anomalii">
+                                <select name="anomali">
                                     <option value="Tidak Ada">Tidak Ada</option>
                                     <option value="Ada">Ada</option>
                                 </select>

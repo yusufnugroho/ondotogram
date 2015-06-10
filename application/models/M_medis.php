@@ -27,12 +27,14 @@ class M_medis extends CI_Model {
                         . "`jenis_kelamin_pasien`,  `alamat_rumah_pasien`, `hp_pasien`, `status_pasien`) "
                         . "VALUES ('$user_pasien','$password_pasien','$nama_lengkap_pasien','$identitas_pasien','$jenis_kelamin_pasien','$alamat_rumah_pasien','$hp_pasien','Tidak Aktif')");
         }*/
-         public function insert($value)
-	{
-		
-                //$this->db->query("INSERT INTO `pasien`( `G18`) "
-                 //       . "VALUES ('$value')");
-                $this->db->query("INSERT INTO `gigi`( `G18`) VALUES ('$value')");
+        //UnFamiliar Command
+        public function insertFadriTest($table,$data)
+            {
+                    $this->db->insert($table,$data);
+        }
+        public function insert($param)
+            {
+                    $this->db->insert('gigi',$param);
         }
         
 }

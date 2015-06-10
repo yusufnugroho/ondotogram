@@ -94,7 +94,7 @@ for($i=11;$i<=85;$i++)
  
            success: function(data){
             //window.location.replace(<?php echo base_url();?>admin/medis/listOdontogram);   
-            //alert(data);
+            alert(data);
            }
  
          });
