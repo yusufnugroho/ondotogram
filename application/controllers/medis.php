@@ -47,9 +47,9 @@ class Medis extends Main_Controller {
         $var = $this->input->post('name');
         //Random String Generator -> ID_REKAM DUMMY
         
-        $original_string = '1234567890';
-        $random_string = get_random_string($original_string, 16);
-        
+        //$original_string = '1234567890';
+        //$random_string = get_random_string($original_string, 16);
+        $random_string = rand(1,1000000);
         $dataG18 = array(
             'G18' => $this->input->post('name'),
             'id_rekam' => $random_string,);
@@ -109,7 +109,7 @@ class Medis extends Main_Controller {
     {
        
         $this->m_medis->deleteOdontogram($param);
-        $this->index();
+        $this->listOdontogram();
         
     }
     public function get_random_string($valid_chars, $length)
