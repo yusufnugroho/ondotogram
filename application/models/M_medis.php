@@ -16,6 +16,9 @@ class M_medis extends CI_Model {
 	{
 		return $this->db->query("select * from pasien where 1");
 	}
+        public function deleteOdontogram($param){
+                $this->db->query("DELETE FROM `gigi` WHERE id_rekam='$param'");
+        }
          /*public function insert()
 	{
 		//$this->db->query("INSERT INTO `dokter`('user_dokter','password_dokter','nama_lengkap_dokter','identitas_dokter','jenis_kelamin_dokter','alamat_dokter','hp_dokter','status_dokter') VALUES ('$user_dokter','$password_dokter','$nama_lengkap_dokter','$identitas_dokter','$jenis_kelamin_dokter','$alamat_dokter','$hp_dokter','Aktif')");

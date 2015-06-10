@@ -6,7 +6,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Ehm</h1>
+                    <h1 class="page-header">Daftar List Pasien</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -28,6 +28,7 @@
                                             <th>Nama Lengkap Pasien</th>
                                             <th>User Pasien</th>
                                             <th>Password Pasien</th>
+                                            <th>Tanggal Lahir Pasien</th>
                                             <th>Jenis Kelamin Pasien</th>
                                             <th>Alamat Pasien</th>
                                             <th>No HP Pasien</th>
@@ -45,6 +46,7 @@
                                             <td>'. $row->nama_lengkap_pasien.'</td>
                                             <td>'. $row->user_pasien .'</td>
                                             <td>'. $row->password_pasien .'</td>
+                                            <td>'. $row->tanggal_lahir_pasien .'</td>
                                             <td>'. $row->jenis_kelamin_pasien .'</td>
                                             <td>'. $row->alamat_rumah_pasien .'</td>
                                             <td>'. $row->hp_pasien .'</td>
@@ -59,7 +61,8 @@
                                                  echo '<a href='. base_url()."admin/activePasien/".$row->id_pasien.' class="btn btn-danger">Deactivated</a>';
                                             }; 
                                              
-                                            echo ' <a href='. base_url()."admin/update/".$row->id_pasien.' class="btn btn-primary"> Editt</a>
+                                            echo ' <a href=# class="btn btn-primary"> Edit</a>';
+                                            echo ' <a href='. base_url()."admin/hapusPasien/".$row->id_pasien.' class="btn btn-warning"> Hapus</a>
                                             </tr>';
                                     }       
                                     ?>

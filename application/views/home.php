@@ -1,72 +1,5 @@
- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-                <a class="navbar-brand" href="index.html">Modern Business</a>
-            </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="about.html">About</a>
-                    </li>
-                    <li><a href="services.html">Services</a>
-                    </li>
-                    <li><a href="contact.php">Contact</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="portfolio-1-col.html">1 Column Portfolio</a>
-                            </li>
-                            <li><a href="portfolio-2-col.html">2 Column Portfolio</a>
-                            </li>
-                            <li><a href="portfolio-3-col.html">3 Column Portfolio</a>
-                            </li>
-                            <li><a href="portfolio-4-col.html">4 Column Portfolio</a>
-                            </li>
-                            <li><a href="portfolio-item.html">Single Portfolio Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="blog-home-1.html">Blog Home 1</a>
-                            </li>
-                            <li><a href="blog-home-2.html">Blog Home 2</a>
-                            </li>
-                            <li><a href="blog-post.html">Blog Post</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="full-width.html">Full Width Page</a>
-                            </li>
-                            <li><a href="sidebar.html">Sidebar Page</a>
-                            </li>
-                            <li><a href="faq.html">FAQ</a>
-                            </li>
-                            <li><a href="404.html">404</a>
-                            </li>
-                            <li><a href="pricing.html">Pricing Table</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+
 
     <div id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -81,7 +14,7 @@
             <div class="item active">
                 <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
                 <div class="carousel-caption">
-                    <h1>Modern Business - A Bootstrap 3 Template</h1>
+                    <h1>DEBUG ON</h1>
                 </div>
             </div>
             <div class="item">
@@ -114,7 +47,7 @@
 
             <div class="row">
                 <div class="col-lg-4 col-md-4">
-                    <h3><i class="fa fa-check-circle"></i> Bootstrap 3 Built</h3>
+                    <h3><i class="fa fa-check-circle"></i>Debug Odontogram</h3>
                     <p>The 'Modern Business' website template by <a href="http://startbootstrap.com">Start Bootstrap</a> is built with <a href="http://getbootstrap.com">Bootstrap 3</a>. Make sure you're up to date with latest Bootstrap documentation!</p>
                 </div>
                 <div class="col-lg-4 col-md-4">
@@ -286,7 +219,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Company 2013</p>
+                    <p>Copyright &copy; PowerRangerTeam 2015</p>
                 </div>
             </div>
         </footer>

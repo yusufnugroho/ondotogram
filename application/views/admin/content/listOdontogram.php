@@ -26,19 +26,26 @@
                                         <tr>
                                             <th>ID REKAM</th>
                                             <th>GIGI NOMER 18</th>
+                                            <th>Action</th>
                                         </tr>   
                                     </thead>
                                     <tbody>
                                         
                                     <?php 
+                                    //$temp= ToString(18);
                                     foreach($odontogram->result() as $row)
                                     {
-
+                                        print_r($row);
+                                        
                                         echo '<tr>'
                                         . ' <td>'. $row->id_rekam .'</td>
                                             <td>'. $row->G18.'</td>
-                                            </tr>'; 
-                                           ;
+                                            
+                                            </td>';
+                                        
+                                        echo ' <td><a href=# class="btn btn-primary"> Edit</a>';
+                                        echo ' <a href='. base_url()."medis/deleteOdontogram/".$row->id_rekam.' class="btn btn-warning"> Hapus</a></td>';
+                                        echo '</tr>';
                                     }       
                                     ?>
                                     </tbody>

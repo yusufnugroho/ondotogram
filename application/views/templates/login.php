@@ -9,7 +9,7 @@
          <b>Info.</b> <?= $info ?>
       </div>
    <? endif; ?>
-   <form class="well" method="POST">
+   <form class="well" method="POST" action="<?php echo base_url();?>home/loginAdmin">
       <label>Username</label>
       <input type="text" name="username" style="width: 260px;" <? if (!empty($username)): ?> value="<?= $username ?>" <? endif; ?>>
       <label>Password</label>

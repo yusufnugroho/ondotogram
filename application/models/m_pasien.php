@@ -16,15 +16,21 @@ class M_pasien extends CI_Model {
 	{
 		$this->db->query("update pasien set status_pasien ='Tidak Aktif' where id_pasien='$id_pasien'");
 	}
-        public function insert($user_pasien,$password_pasien,$nama_lengkap_pasien,$identitas_pasien,$jenis_kelamin_pasien,$alamat_rumah_pasien,$hp_pasien)
+        public function insert($user_pasien,$password_pasien,$nama_lengkap_pasien,$identitas_pasien,$tanggal_lahir_pasien,$jenis_kelamin_pasien,$alamat_rumah_pasien,$hp_pasien)
 	{
 		//$this->db->query("INSERT INTO `dokter`('user_dokter','password_dokter','nama_lengkap_dokter','identitas_dokter','jenis_kelamin_dokter','alamat_dokter','hp_dokter','status_dokter') VALUES ('$user_dokter','$password_dokter','$nama_lengkap_dokter','$identitas_dokter','$jenis_kelamin_dokter','$alamat_dokter','$hp_dokter','Aktif')");
                 //$this->db->query("INSERT INTO `dokter`(`user_dokter`, `password_dokter`, `nama_lengkap_dokter`, `identitas_dokter`, `jenis_kelamin_dokter`, `alamat_dokter`, `hp_dokter`, `status_dokter`) VALUES ('$user_dokter','$password_dokter','$nama_lengkap_dokter','$identitas_dokter','$jenis_kelamin_dokter','$alamat_dokter','$hp_dokter','Tidak Aktif')");
                 $this->db->query("INSERT INTO `pasien`( `user_pasien`, `password_pasien`, `nama_lengkap_pasien`, `identitas_pasien`, "
-                        . "`jenis_kelamin_pasien`,  `alamat_rumah_pasien`, `hp_pasien`, `status_pasien`) "
-                        . "VALUES ('$user_pasien','$password_pasien','$nama_lengkap_pasien','$identitas_pasien','$jenis_kelamin_pasien','$alamat_rumah_pasien','$hp_pasien','Tidak Aktif')");
+                        . "`tanggal_lahir_pasien`,`jenis_kelamin_pasien`,  `alamat_rumah_pasien`, `hp_pasien`, `status_pasien`) "
+                        . "VALUES ('$user_pasien','$password_pasien','$nama_lengkap_pasien','$identitas_pasien','$tanggal_lahir_pasien','$jenis_kelamin_pasien','$alamat_rumah_pasien','$hp_pasien','Tidak Aktif')");
         }
-        
+        public function hapusPasien($param)
+        {
+            $this->db->query("DELETE FROM `pasien` WHERE id_pasien='$param'");
+        }
+        //Pasien Debug On (Loading)
+
+
         
         
         

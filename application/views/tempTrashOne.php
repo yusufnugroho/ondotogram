@@ -1,31 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Odontogram</title>
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-   <script src="<?php echo base_url('assets/modern-business/js/modern-business.js') ?>"></script>   
-    <!-- jQuery -->
-    <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
-    <script src="<?php echo base_url();?>assets/js/modal.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery-ui.min.js"></script>
-
-   <link href="<?php echo base_url('assets/bootstrap-3.1.1/css/bootstrap.min.css') ?>" rel="stylesheet">
-   <link href="<?php echo base_url('assets/bootstrap-3.1.1/css/font-awesome.css') ?>" rel="stylesheet">
-   <link href="<?php echo base_url('assets/bootstrap-3.1.1/css/custom.css') ?>" rel="stylesheet">
-   <link href="<?php echo base_url('assets/bootstrap-3.1.1/css/custom.css') ?>" rel="stylesheet">
-   <link href="<?php echo base_url('assets/modern-business/css/modern-business.css" rel="stylesheet'); ?>">
-</head>
-<body> 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -36,25 +8,18 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-                <a class="navbar-brand" href="<?php echo base_url();?>home/">Odontogram</a>
+                <a class="navbar-brand" href="index.html">Modern Business</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">About</a>
+                    <li><a href="about.html">About</a>
                     </li>
-                    <!--
                     <li><a href="services.html">Services</a>
                     </li>
-                    -->
-                    <li>
-                        <a href="#">Contact</a>
+                    <li><a href="contact.php">Contact</a>
                     </li>
-                    <li>
-                        <a href="<?php echo base_url();?>home/login">Login</a>
-                    </li>
-                    <!--
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -69,8 +34,7 @@
                             <li><a href="portfolio-item.html">Single Portfolio Item</a>
                             </li>
                         </ul>
-                    </li>-->
-                    <!--
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -82,8 +46,6 @@
                             </li>
                         </ul>
                     </li>
-                    -->
-                    <!--
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -99,10 +61,10 @@
                             </li>
                         </ul>
                     </li>
-                    -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
+-->

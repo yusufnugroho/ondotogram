@@ -53,6 +53,10 @@
                                             <input type='text' name='nama_lengkap_pasien'class="form-control" autocomplete="off" required autofocus>
                                         </div>       
                                         <div class="form-group">
+                                            <label>Tanggal Lahir Pasien</label>
+                                            <input type='date' name='tanggal_lahir_pasien'class="form-control" autocomplete="off" required autofocus>
+                                        </div>       
+                                        <div class="form-group">
                                             <label>Jenis Kelamin</label>
                                             <div class="radio">
                                                 <label>

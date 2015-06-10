@@ -53,7 +53,7 @@
                                                  echo '<a href='. base_url()."admin/activeDokter/".$row->id_dokter.' class="btn btn-danger">Deactivated</a>';
                                             }; 
                                              
-                                            echo ' <a href='. base_url()."admin/update/".$row->id_dokter.' class="btn btn-primary"> Editt</a>
+                                        echo ' <a href=# class="btn btn-primary"> Edit</a>
                                             </tr>';
                                     }       
                                     ?>

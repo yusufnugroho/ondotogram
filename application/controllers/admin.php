@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
@@ -12,8 +12,14 @@ class Admin extends CI_Controller {
         $this->load->model('m_pasien');
         
     }
-    public function index() {
-
+    public function index() 
+    {
+        //print_r($_SESSION);
+        if($_SESSION==NULL)
+        {
+            //$this->logout();
+            redirect("home/logout");
+        }
         $this->load->view('admin/include/header');
         $this->load->view('admin/include/navbar');
         $this->load->view('admin/include/footer');
@@ -99,114 +105,31 @@ class Admin extends CI_Controller {
             $password_pasien = $this->input->post('password_pasien');
             $nama_lengkap_pasien = $this->input->post('nama_lengkap_pasien');
             $identitas_pasien = $this->input->post('identitas_pasien');
+            $tanggal_lahir_pasien = $this->input->post('tanggal_lahir_pasien');
             $jenis_kelamin_pasien = $this->input->post('jenis_kelamin_pasien');
             $alamat_pasien = $this->input->post('alamat_pasien');
             $hp_pasien = $this->input->post('hp_pasien');
-            $this->m_pasien->insert($user_pasien,$password_pasien,$nama_lengkap_pasien,$identitas_pasien,$jenis_kelamin_pasien,
+            if($user_pasien!=NULL && $identitas_pasien!=NULL && $nama_lengkap_pasien!=NULL)
+            {
+                $this->m_pasien->insert($user_pasien,$password_pasien,$nama_lengkap_pasien,$identitas_pasien,$tanggal_lahir_pasien,$jenis_kelamin_pasien,
                     $alamat_pasien,$hp_pasien);
+            }
+            else{
+                
+                echo "<script>alert('data tidak lengkap')</script>";
+                $this->listPasien();
+            }
             $this->listPasien();
            
+    }
+    public function hapusPasien($param)
+    {
+        $this->m_pasien->hapusPasien($param); 
+        $this->listPasien();
     }
 
     
 
 }
-/*
 
- * <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
-class Mente extends CI_Controller {
-
-	public function __construct() {
-		parent::__construct();
-		$this->load->helper('url');
-		$this->load->model('m_mentor');
-		$this->load->model('m_mente');
-		$this->load->model('m_dosen');
-	}
-
-	public function index()
-	{
-		$data['mente'] = $this->m_mente->getDataMente();
-                $this->load->view('dashboard/header');
-                $this->load->view('dashboard/navbar');
-		$this->load->view('mente/indexMente',$data);
-                $this->load->view('dashboard/footer');
-	}
-	public function addmente()
-	{		
-		$data['mentor'] = $this->m_mentor->getDataMentorActive();
-		$data['dosen'] = $this->m_dosen->getDataDosen();
-                $this->load->view('dashboard/header');
-                $this->load->view('dashboard/navbar');
-		$this->load->view('mente/addMente',$data);
-                $this->load->view('dashboard/footer');
-        }
-	public function update($NRP)
-	{
-		$data['all'] = $this->m_mente->getData($NRP);
-		$data['mentor'] = $this->m_mentor->getDataMentorActive();
-		$data['dosen'] = $this->m_dosen->getDataDosenActive();
-                $this->load->view('dashboard/header');
-                $this->load->view('dashboard/navbar');
-		$this->load->view('mente/updateMente',$data);
-                $this->load->view('dashboard/footer');
-	}
-        public function updateNilai($nrp)
-        {
-                $data['mente'] = $this->m_mente->getData($nrp);
-                $this->load->view('dashboard/header');
-                $this->load->view('dashboard/navbar');
-		$this->load->view('mente/updateNilai',$data);
-                $this->load->view('dashboard/footer');
-        }
-        public function active($nrp)
-	{
-		$this->m_mente->active($nrp);
-		$this->index();
-	}
-        public function deactive($nrp)
-	{
-		$this->m_mente->deactive($nrp);
-		$this->index();
-	}
-	public function Hapus($nrp)
-	{
-		$this->m_mente->hapusMente($nrp);
-		$this->index();
-	}
-
-	public function insertmente()
-	{
-		$nrpmente = $this->input->post('nrpmente');
-		$nrpmentor = $this->input->post('nrpmentor');
-		$nipdosen = $this->input->post('nipdosen');
-		$depanmente = $this->input->post('frontname');
-		$belakangmente = $this->input->post('endname');
-		$jkmente = $this->input->post('jkmente');
-		$hpmente = $this->input->post('hpmente');
-		$this->m_mente->insert($nrpmente,$nrpmentor,$nipdosen,$depanmente,$belakangmente,$jkmente,$hpmente);
-		$this->index();
-	}
-	public function updatemente($nrpmente)
-	{
-		$nrpmentor = $this->input->post('nrpmentor');
-		$nipdosen = $this->input->post('nipdosen');
-		$depanmente = $this->input->post('frontname');
-		$belakangmente = $this->input->post('endname');
-		$hpmente = $this->input->post('hpmente');
-                $jkmente = $this->input->post('jkmente');
-		$this->m_mente->update($nrpmente,$nrpmentor,$nipdosen,$depanmente,$belakangmente,$hpmente,$jkmente);
-		$this->index();
-	}
-	public function updateNilaiReady($nrpmente)
-	{
-		$nilai = $this->input->post('nilai');
-           	$this->m_mente->updateNilai($nrpmente,$nilai);
-		$this->index();
-	}
-        
-}
-
- */
 
