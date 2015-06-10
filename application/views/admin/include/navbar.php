@@ -84,6 +84,19 @@
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>                    
+<!--Control Gigi-->
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Kontrol GIGI<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="<?php echo base_url();?>medis/listodontogram/">List Odontogram</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url();?>medis/addOdontogram">Tambah Catatan Odontogram</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>                    
                 <!-- /#side-menu -->
             </div>
             <!-- /.sidebar-collapse -->
