@@ -13,7 +13,7 @@
 
         <div class="row">
             <div class="col-lg-12 col-md-4">
-                <form action="<?php echo base_url();?>medis/insert" method="post">
+                <form action="<?php echo base_url();?>medis/insert/2" method="post">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         Odontogram

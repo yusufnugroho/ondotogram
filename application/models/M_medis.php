@@ -32,9 +32,25 @@ class M_medis extends CI_Model {
             {
                     $this->db->insert($table,$data);
         }
+        public function max()
+        {
+            $this->db->select_max('id_rekam');
+            $query = $this->db->get('gigi');
+            $max = $query->row_array();
+            $max = $max['id_rekam'];
+            return $max;
+        }
         public function insert($param)
             {
                     $this->db->insert('gigi',$param);
         }
-        
+        public function insert2($max,$data)
+        {  
+            $this->db->where('id_rekam', $max);
+            $this->db->update('gigi', $data);
+        }
+        public function getOne($id)
+        {
+            return  $this->db->get_where('gigi', array('id_rekam' => $id))->row();
+        }
 }

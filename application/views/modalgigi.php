@@ -89,7 +89,7 @@ for($i=11;$i<=85;$i++)
         /*Test*/
         $.ajax({
            type: "POST",
-           url: "<?php echo base_url(); ?>medis/insert",
+           url: "<?php echo base_url(); ?>medis/insert/1",
            data: {name: x<?php echo $i;?>},
  
            success: function(data){
