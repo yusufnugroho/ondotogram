@@ -42,7 +42,7 @@ class Medis extends Main_Controller {
     }        
     public function insert($no)
     {
-<<<<<<< HEAD
+
         $this->load->model('m_medis');
         $max = $this->m_medis->max();
         if($no==1){
@@ -64,7 +64,7 @@ class Medis extends Main_Controller {
             //echo strlen($sampleVar);
             //echo "Panjang Character :".$varLength;
             //if($var!="" && $varLength >= 7)
-=======
+
         $var = $this->input->post('name');
         //Random String Generator -> ID_REKAM DUMMY
         
@@ -90,7 +90,7 @@ class Medis extends Main_Controller {
         //TEMP :            '11' //=> //ini diisi inputannya dr ajax, td belum berhasil kayaknya cup ._.
         /* Masih Belum Dibenerin
         $data = array(
->>>>>>> 1144c9c85d872d09dc9c74e194176282d9e9a78f
+
 
             //$var = $this->input->post('a');
             echo $var;
@@ -145,7 +145,7 @@ class Medis extends Main_Controller {
         $this->listOdontogram();
         
     }
-<<<<<<< HEAD
+
     public function get_random_string($valid_chars, $length)
     {
         // start with an empty random string
@@ -189,10 +189,10 @@ class Medis extends Main_Controller {
         $this->load->view('admin/content/odontogramPasien',$data);
         $this->load->view('admin/include/footer');
     }
-=======
+
    
     
->>>>>>> 1144c9c85d872d09dc9c74e194176282d9e9a78f
+
 }
 
 /* End of file frontpage.php */
