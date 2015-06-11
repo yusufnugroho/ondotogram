@@ -35,7 +35,7 @@
                                     //$temp= ToString(18);
                                     foreach($odontogram->result() as $row)
                                     {
-                                        print_r($row);
+                                        //print_r($row);
                                         
                                         echo '<tr>'
                                         . ' <td>'. $row->id_rekam .'</td>
